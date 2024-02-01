@@ -4,15 +4,15 @@ import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 import { getEvents } from '$utils/getEvents';
-import { greetUser } from '$utils/greet';
+// import { greetUser } from '$utils/greet';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
   const eventsList = getEvents('[data-element="events"]');
   const caledar = document.querySelector<HTMLElement>('[data-element="calendar"]');
   if (!caledar) return;
-  console.log('[*****]', caledar, eventsList);
-  greetUser('test');
+  // console.log('[*****]', caledar, eventsList);
+  // greetUser('test');
   const displayCalendar = new Calendar(caledar, {
     plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
     initialView: 'dayGridMonth',
